@@ -29,8 +29,8 @@ use bevy::{
 /// The results of a shapecast are in an arbitrary order by default. You can iterate over them in the order of
 /// distance with the [`ShapeHits::iter_sorted`] method.
 ///
-/// You can configure the maximum amount of hits for a shapecast using `max_hits`. By default this is unbounded,
-/// so you will get all hits. When the number or complexity of colliders is large, this can be very
+/// You can configure the maximum amount of hits for a shapecast using `max_hits`. By default this is `1`,
+/// and should be increased for many use cases. When the number or complexity of colliders is large, this can be very
 /// expensive computationally. Set the value to whatever works best for your case.
 ///
 /// Note that when there are more hits than `max_hits`, **some hits will be missed**.
